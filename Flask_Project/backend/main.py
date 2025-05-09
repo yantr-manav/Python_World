@@ -14,7 +14,7 @@ def get_contacts():
      return jsonify({"contacts":json_contacts}),200
  
 
-@app.route("create-contact",methods = ["POST"])
+@app.route("/create-contact",methods = ["POST"])
 def create_contact():
     first_name = request.json.get("firstName")
     last_name = request.json.get("lastName")
@@ -51,14 +51,14 @@ def update_contact(user_id):
     except Exception as e:
         return (jsonify({"message":str(e)})),400
     
-    return (jsonify({"message";"Contact updated successfully!"}),200) 
+    return (jsonify({"message":"Contact updated successfully!"}),200) 
     
     
     
 @app.route("/delete_contact/<int:user_id>",methods = ["DELETE"])
 def delete_contact(user_id):
     contact = Contact.query.get(user_id)
-    if not in contact:
+    if not contact:
         return(jsonify({"message": "Contact not found"}),404)
     
     db.session.delete(contact)
