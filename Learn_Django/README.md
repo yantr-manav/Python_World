@@ -1,1 +1,1 @@
-## Basics of Django are covered in thi Repository
+## Basics of Django are covered in this Repository
