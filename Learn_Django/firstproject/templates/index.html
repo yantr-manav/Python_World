@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Django Project</title>
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+</head>
+<body>
+    <header>
+        <h1>Personal Information </h1>
+        <input type="text" placeholder="First Name" id="fname">
+        <input type="text" placeholder="Last Name" id="lname">
+        <input type="text" placeholder="Username" id="uname">
+        <input type="text" placeholder="Email" id="email" required>
+        <input type="text" placeholder="password" id="password" pattern=".{8,}" title="8 characters minimum" required >
+        <input type="text" placeholder="Confirm Password" id="cpassword" pattern=".{8,}" title="8 characters minimum" required>
+        <input type="text" placeholder="address" id="address">
+        <input type="search" placeholder="city"  id="city" for_id="city">
+        <input type="text" placeholder="state" id="state">
+        <input type= 'number'placeholder = 'pincode' id = 'pincode'>
+        
+        
+    </header>
+</body>
+</html>
