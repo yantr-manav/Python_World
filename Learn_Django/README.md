@@ -1,0 +1,1 @@
+## Basics of Django are covered in thi Repository
