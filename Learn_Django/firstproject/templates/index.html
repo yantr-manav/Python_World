@@ -1,4 +1,6 @@
+{% extends "layout.html" %}
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,9 +10,13 @@
     <link rel="stylesheet" href="{% static 'style.css'%}">
 </head>
 <body>
+    {% block content %}
+
+<h1 class = "text-7xl bg-red-500 ">Chai aur code | Home Page</h1>
+<p class= " text-center bg-orange-500 text-2xl my-10">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt rerum magni atque, repellendus ab consequatur, facere quod veniam harum praesentium dolor! Quidem beatae delectus neque similique possimus aliquam, soluta consequuntur.</p>
     <header>
         <h1>Personal Information </h1>
-        <input type="text" placeholder="First Name" id="fname">
+        <input  type="text" placeholder="First Name" id="fname">
         <input type="text" placeholder="Last Name" id="lname">
         <input type="text" placeholder="Username" id="uname">
         <input type="text" placeholder="Email" id="email" required>
@@ -23,5 +29,6 @@
         
         
     </header>
+    {% endblock %}
 </body>
 </html>
